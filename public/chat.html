@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="chat_section">
+        <div class="brand">
+            <img height="40px" src="images/logo.png" alt="Logo">
+            <h1>CHAT.IO</h1>
+        </div>
+        <div class="chat-area">
+            <div class="message_area"></div>
+            <textarea id="text" rows="2" placeholder="Type a message..."></textarea>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+    <script>
+        const username = '<%= username %>'; // Ensure username is properly embedded
+        localStorage.setItem('username', username);
+    </script>
+</body>
+</html>
